@@ -1,5 +1,7 @@
 package com.soldat;
 
+import java.util.ResourceBundle;
+
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -14,10 +16,13 @@ public class BaseController {
 	private static final String VIEW_INDEX = "index";
 	private final static org.slf4j.Logger logger = LoggerFactory.getLogger(BaseController.class);
 
+	ResourceBundle bundle1 = ResourceBundle.getBundle("messages");
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
+		String test = bundle1.getString("message.hello");
 
-		model.addAttribute("message", "Test");
+		model.addAttribute("message", test);
 		model.addAttribute("counter", ++counter);
 		logger.debug("[welcome] counter : {}", counter);
 
