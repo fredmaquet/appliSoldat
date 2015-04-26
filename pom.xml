@@ -17,19 +17,21 @@
 	</properties>
 
 	<dependencies>
+		<!-- MONITORING -->
 		<dependency>
 			<groupId>net.bull.javamelody</groupId>
 			<artifactId>javamelody-core</artifactId>
 			<version>1.55.0</version>
 		</dependency>
-		<!-- Unit Test -->
+		
+		<!-- TEST UNITAIRES -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 		</dependency>
 
-		<!-- Spring Core -->
+		<!-- SPRING CORE -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
