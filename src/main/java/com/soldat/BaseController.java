@@ -1,5 +1,6 @@
 package com.soldat;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import org.slf4j.LoggerFactory;
@@ -15,8 +16,8 @@ public class BaseController {
 	private static int counter = 0;
 	private static final String VIEW_INDEX = "index";
 	private final static org.slf4j.Logger logger = LoggerFactory.getLogger(BaseController.class);
-
-	ResourceBundle bundle1 = ResourceBundle.getBundle("messages");
+	Locale defaultLocale = Locale.getDefault();
+	ResourceBundle bundle1 = ResourceBundle.getBundle("messages",defaultLocale);
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
